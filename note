@@ -17,8 +17,9 @@ iwconfig
 sudo passwd root
 
 #modify default user home directory
-usermod –d /home/zhouwuxiang
-uderadd zhouwuxiang –d /home/zhouwuxiang
+usermod –d /home/username
+mkdir /home/username
+useradd username –d /home/username
 
 #linux .bashrc文件修改和生效
 每次修改.bashrc后，使用source ~/.bashrc（或者 . ~/.bashrc）
