@@ -7,7 +7,7 @@ deb http://mirrors.ustc.edu.cn/raspbian/raspbian/   wheezy main contrib non-free
 这个源实际就是中科大的镜像，中科大是国内的Debian官方认可的源镜像，所以稳定性和速度都有保障！
 保存退出即可！接下来试试更新体验下速度!
 sudo apt-get upgrade
-## tsinghua mirrors
+### tsinghua mirrors
 ```
 deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ jessie main non-free contrib
 deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ jessie main non-free contrib
@@ -26,18 +26,18 @@ sudo passwd root
 ```
 ### modify default user home directory
 ```
-usermod –d /home/zhouwuxiang
-uderadd zhouwuxiang –d /home/zhouwuxiang
+usermod –d /home/your_user_name
+uderadd your_user_name –d /home/your_user_name
 ```
-### linux .bashrc文件修改和生效
+### .bashrc文件修改和生效
 每次修改.bashrc后，使用source ~/.bashrc（或者 . ~/.bashrc）
 
-#### /etc/network/interfaces
+### /etc/network/interfaces
 network interface configuration for ifup and ifdown
 
 ### To start/stop/restart  Linux network service:
 ```
 /etc/init.d/networking restart
-for systemd based 
+# for systemd based 
 systemctl start/stop/restart networking
 ```
