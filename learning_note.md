@@ -57,3 +57,21 @@ lsusb
 lsmod
 iwconfig
 ```
+
+### use dd  other than windows to flash image
+previously I was using windwows Win32DiskImager and  SDFormatter, but it's not working properly these days.
+then I tried linux dd, it's fine
+```
+# list all disks
+sudo fdisk -l
+
+# diskpart(remove all partitions, assume using sdx)
+sudo fdisk /dev/sdx
+	-m for help
+	-d delete a partition
+	-w write table to disk and exit
+	-n add a new partition
+	
+# flash the image 
+dd bs=4M if=2016-11-25-raspbian-jessie.img of=/dev/sdx
+```
