@@ -58,9 +58,8 @@ lsmod
 iwconfig
 ```
 
-### use dd  other than windows to flash image
-previously I was using windwows Win32DiskImager and  SDFormatter, but it's not working properly these days.
-then I tried linux dd, it's fine
+### use dd rather than Win32DiskImager to flash image
+previously I was using windwows Win32DiskImager and  SDFormatter, but it's not working properly these days with file not found error every time.then I tried linux dd command, it's working fine
 ```
 # list all disks
 sudo fdisk -l
