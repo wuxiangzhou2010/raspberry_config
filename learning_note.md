@@ -4,11 +4,10 @@
 account:`pi`
 passwd:`raspberry`
 
-### RaspberryPi source list
+### raspberryPi source list
 change to faster source
 ```
 sudo vi  /etc/apt/sources.list
-
 # tsinghua university mirror
 deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ jessie main non-free contrib
 deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ jessie main non-free contrib
@@ -16,14 +15,14 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ jessie main non-f
 sudo apt-get upgrade
 ```
 
-### Change passwd
+### change passwd
 for ubuntu distribution, root account is not enabled by default
 use `sudo passwd` to active and set password for root account
 ```
 sudo passwd
 sudo passwd root
 ```
-### add new user account along with home directory,shell etc.
+### add new user account along with home directory, shell etc.
 ```
 useradd -m -s /bin/bash -d/home/USER_NAME USER_NAME
 # add sudo privilege
@@ -37,7 +36,7 @@ alias r='rm -rf'
 alias u='svn update'
 ```
 
-### To start/stop/restart network service
+### start/stop/restart network service
 ```
 sudo /etc/init.d/networking restart
 sudo service networking restart
