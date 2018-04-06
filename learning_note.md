@@ -1,10 +1,14 @@
 ## Pi configuration
 
-### default account 
+### [installing the image](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
+
+using [Etcher](https://etcher.io/) 
+
+### Default account 
 account:`pi`
 passwd:	`raspberry`
 
-### raspberryPi source list
+### RaspberryPi source list
 change to faster mirror
 ``` bash
 sudo vi  /etc/apt/sources.list
@@ -14,7 +18,7 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ jessie main non-f
 
 sudo apt-get upgrade
 ```
-### add new user account along with home directory, shell etc.
+### Add new user account along with home directory, shell etc.
 ``` bash
 useradd -m -s /bin/bash -d/home/USER_NAME USER_NAME
 # add sudo privilege
@@ -30,7 +34,7 @@ sudo service networking restart
 sudo systemctl start/stop/restart networking
 ```
 
-### enable ipv4_forward
+### Enable ipv4_forward
 ```
 sudo sysctl -w net.ipv4.ip_forward=1
 sudo echo 1 > /proc/sys/net/ipv4/ip_forward
@@ -44,7 +48,7 @@ lsmod
 iwconfig
 ```
 
-### use dd rather than Win32DiskImager to flash image
+### Another way: use dd rather than Win32DiskImager to flash image
 previously I was using windwows Win32DiskImager and  SDFormatter, but it's not working properly these days with file not found error every time.then I tried linux dd command, it's working fine
 ``` bash
 # list all disks
