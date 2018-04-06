@@ -1,3 +1,4 @@
+``` bash
 #/etc/network/interfaces
 
 #loopback configuration
@@ -19,3 +20,4 @@ iface wlan0 inet static
 hostapd /etc/hostapd/hostapd.conf
 address 192.168.8.1
 netmask 255.255.255.0
+```
