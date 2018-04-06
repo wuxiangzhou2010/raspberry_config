@@ -1,3 +1,4 @@
+``` bash
 #configuration for a wifi use wpa-supplicant
 auto lo
 iface lo inet lookpack
@@ -14,3 +15,4 @@ netmask 255.255.255.0
 #iface wlan0 inet manual
 #wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
 #iface default inet dhcp
+```
